@@ -1,10 +1,23 @@
 @font-face {
-  font-family: 'bitterbold';
-  src: url('../fonts/bitter-bold-webfont.eot');
-  src: url('../fonts/bitter-bold-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/bitter-bold-webfont.woff') format('woff'),
-  url('../fonts/bitter-bold-webfont.ttf') format('truetype'),
-  url('../fonts/bitter-bold-webfont.svg#bitterbold') format('svg');
+  font-family: 'philosopher-regular';
+  src: url('../fonts/philosopher-regular-webfont.woff') format('woff'),
+  url('../fonts/philosopher-regular-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'scada-bold';
+  src: url('../fonts/scada-bold-webfont.woff') format('woff'),
+  url('../fonts/scada-bold-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'scada-regular';
+  src: url('../fonts/scada-regular-webfont.woff') format('woff'),
+  url('../fonts/scada-regular-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
