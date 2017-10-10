@@ -1,4 +1,4 @@
-//$icons: sprite-map('icons/*.png', $spacing: 8px, $layout: 'smart');
+$icons: sprite-map('icons/*.png', $spacing: 8px, $layout: 'smart');
 //$h-sprites: sprite-map('h-sprites/*.png',$layout: 'vertical', $spacing: 8px);
 //$v-sprites: sprite-map('v-sprites/*.png', $layout: 'horizontal', $spacing: 8px);
 
@@ -16,11 +16,11 @@ $width-xsmall: 90%;
 $bp-small: 768px;
 $width-small: 710px;
 //$bp-middle > sm >= $bp-small
-$bp-middle: 1170px;
-$width-middle: 1100px;
+$bp-middle: 1200px;
+$width-middle: 1170px;
 //$bp-large > md >= $bp-middle
-$bp-large: 1292px;
-$width-large: 981px;
+$bp-large: 1200px;
+$width-large: 1170px;
 
 //offsets
 $container-padding-left: 0;
@@ -29,9 +29,9 @@ $container-padding-right: 0;
 $container-fluid-padding-left: 0;
 $container-fluid-padding-right: 0;
 
-$row-margin-left: -20px;
-$row-margin-right: -20px;
+$row-margin-left: -15px;
+$row-margin-right: -15px;
 
-$col-padding-left: 20px;
-$col-padding-right: 20px;
+$col-padding-left: 15px;
+$col-padding-right: 15px;
 //fonts

@@ -1,4 +1,81 @@
-.conatiner{
+.conatiner {
   max-width: 1170px;
   margin: 0 auto;
+}
+
+.section-top {
+  padding: 245px 0;
+  background: image-url('bg/bg-1.jpg');
+  @include background-size(cover);
+
+  h1 {
+    font-size: 60px;
+    font-family: $philosopher-regular;
+    color: #fff;
+    margin: 0 0 55px;
+  }
+
+  .item {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 40px;
+
+    p {
+      margin: 15px 0 0;
+    }
+  }
+}
+
+.section-advantages {
+
+  .form-wrapper {
+    padding: 50px 0;
+
+    strong {
+      font-family: $philosopher-regular;
+      font-size: 24px;
+      color: #c1aa81;
+    }
+
+    p {
+      color: #555555;
+      font-size: 16px;
+    }
+
+    .form {
+      background: #c1aa81;
+      padding: 55px 60px 41px 0;
+      margin-left: 50px;
+      position: relative;
+      margin-top: -85px;
+
+      &:before {
+        @include pseudo-block($top: 0, $right: 100%, $bottom: 0);
+        background: image-url('bg/curner.png');
+        background-size: 50px 100%;
+        width: 50px;
+      }
+
+      input[type="text"] {
+        background: rgba(255, 255, 255, 0.21);
+        padding: 14px 18px;
+        width: 240px;
+        margin-right: 15px;
+        color: rgba(255, 255, 255, 0.70);
+        border: none;
+        @include input-placeholder(rgba(255, 255, 255, 0.70));
+        @include border-radius(4px);
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .textfield, .form-checker {
+        margin-bottom: 15px;
+      }
+
+    }
+  }
+
 }
