@@ -1,8 +1,13 @@
 (function ($) {
 
-  function init() {
-
-  }
+    $(window).load(function() {
+        $('.flexslider').flexslider({
+            animation: "slide",
+          prevText: "",           //String: Set the text for the "previous" directionNav item
+          nextText: "",
+          controlNav:false
+        });
+    });
 
   $(window).load(function(){
     $('.scroll-pane').jScrollPane();
