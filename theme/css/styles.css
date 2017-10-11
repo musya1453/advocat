@@ -440,6 +440,12 @@ h1, h2, h3, h4, h5, h6, strong {
   margin: 0 auto;
 }
 
+h2 {
+  font-size: 60px;
+  margin: 0;
+  font-family: "philosopher-regular";
+}
+
 .section-top {
   padding: 245px 0;
   background: url('../images/bg/bg-1.jpg');
@@ -463,8 +469,13 @@ h1, h2, h3, h4, h5, h6, strong {
   margin: 15px 0 0;
 }
 
+.section-advantages h2 {
+  margin-bottom: 80px;
+  color: #c1aa81;
+}
 .section-advantages .form-wrapper {
   padding: 50px 0;
+  margin-bottom: 80px;
 }
 .section-advantages .form-wrapper strong {
   font-family: "philosopher-regular";
@@ -518,6 +529,35 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 .section-advantages .form-wrapper .form .textfield, .section-advantages .form-wrapper .form .form-checker {
   margin-bottom: 15px;
+}
+.section-advantages .items {
+  text-align: center;
+  font-size: 16px;
+}
+.section-advantages .items .item {
+  text-align: left;
+  display: inline-block;
+  width: 510px;
+  margin-right: 140px;
+}
+.section-advantages .items .item:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.section-advantages .items .item .ico {
+  float: left;
+}
+.section-advantages .items .item .text {
+  overflow: hidden;
+}
+.section-advantages .items .item h4 {
+  font-size: 36px;
+  font-family: "philosopher-regular";
+  margin: 0;
 }
 
 .header-wrapper {

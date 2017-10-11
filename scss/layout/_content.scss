@@ -3,6 +3,12 @@
   margin: 0 auto;
 }
 
+h2 {
+  font-size: 60px;
+  margin: 0;
+  font-family: $philosopher-regular;
+}
+
 .section-top {
   padding: 245px 0;
   background: image-url('bg/bg-1.jpg');
@@ -28,8 +34,14 @@
 
 .section-advantages {
 
+  h2 {
+    margin-bottom: 80px;
+    color: #c1aa81;
+  }
+
   .form-wrapper {
     padding: 50px 0;
+    margin-bottom: 80px;
 
     strong {
       font-family: $philosopher-regular;
@@ -75,6 +87,33 @@
         margin-bottom: 15px;
       }
 
+    }
+  }
+
+  .items {
+    text-align: center;
+    font-size: 16px;
+
+    .item {
+      text-align: left;
+      display: inline-block;
+      width: 510px;
+      margin-right: 140px;
+      @include clearfix();
+
+      .ico {
+        float: left;
+      }
+
+      .text {
+        overflow: hidden;
+      }
+
+      h4 {
+        font-size: 36px;
+        font-family: $philosopher-regular;
+        margin: 0;
+      }
     }
   }
 
