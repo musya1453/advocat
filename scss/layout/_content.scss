@@ -1,6 +1,36 @@
-.conatiner {
-  max-width: 1170px;
-  margin: 0 auto;
+.btn-wrap {
+
+  &.style-a .btn {
+    display: inline-block;
+    text-align: center;
+    border: 2px solid #d2c3a7;
+    @include border-radius(30px);
+    text-transform: uppercase;
+    color: #000;
+    padding: 12px 35px;
+    text-decoration: none;
+    @include transition(background .3s);
+
+    &:hover {
+      background: #d2c3a7;
+    }
+  }
+
+  &.style-b .btn {
+    padding: 11px 54px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    @include transition(background .3s, color .3s);
+    @include border-radius(30px);
+    background: transparent;
+    letter-spacing: 1px;
+
+    &:hover {
+      background: #fff;
+      color: #c1aa81;
+    }
+  }
 }
 
 h2 {
@@ -32,12 +62,73 @@ h2 {
   }
 }
 
-.section-advantages {
+.form-wrapper {
 
-  h2 {
-    margin-bottom: 80px;
-    color: #c1aa81;
+  input[type="text"] {
+    background: rgba(255, 255, 255, 0.21);
+    padding: 14px 18px;
+    width: 240px;
+    margin-right: 15px;
+    color: rgba(255, 255, 255, 0.70);
+    border: none;
+    @include input-placeholder(rgba(255, 255, 255, 0.70));
+    @include border-radius(4px);
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
+
+  .form-checker {
+    margin-bottom: 20px;
+
+    input {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+    }
+
+    input, label {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    label {
+
+      &:before {
+        @include pseudo-block($top: 50%, $left: 0);
+        @include translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background: #cdbb9a;
+        @include border-radius(4px);
+      }
+
+      &:after {
+        @include pseudo-block($top: 50%, $left: 3px);
+        @include translateY(-50%);
+        width: 14px;
+        height: 14px;
+        background: rgba(255, 255, 255, 0.47);
+        @include border-radius(3px);
+        display: none;
+      }
+    }
+
+    input:checked + label:after {
+      display: block;
+    }
+  }
+
+  label {
+    color: rgba(255, 255, 255, 0.70);
+    position: relative;
+    padding-left: 35px;
+  }
+}
+
+.section-advantages {
+  padding-bottom: 150px;
 
   .form-wrapper {
     padding: 50px 0;
@@ -55,7 +146,11 @@ h2 {
     }
 
     .form {
-      background: #c1aa81;
+      background-color: #c1aa81;
+      background-image: image-url('bg/form-bg.png');
+      background-repeat: no-repeat;
+      background-position: right;
+
       padding: 55px 60px 41px 0;
       margin-left: 50px;
       position: relative;
@@ -87,9 +182,59 @@ h2 {
         margin-bottom: 15px;
       }
 
+      .form-checker {
+        margin-bottom: 20px;
+
+        input {
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+        }
+
+        input, label {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        label {
+
+          &:before {
+            @include pseudo-block($top: 50%, $left: 0);
+            @include translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: #cdbb9a;
+            @include border-radius(4px);
+          }
+
+          &:after {
+            @include pseudo-block($top: 50%, $left: 3px);
+            @include translateY(-50%);
+            width: 14px;
+            height: 14px;
+            background: rgba(255, 255, 255, 0.47);
+            @include border-radius(3px);
+            display: none;
+          }
+        }
+
+        input:checked + label:after {
+          display: block;
+        }
+      }
+
+      label {
+        color: rgba(255, 255, 255, 0.70);
+        position: relative;
+        padding-left: 35px;
+      }
     }
   }
 
+  h2 {
+    margin-bottom: 80px;
+    color: #c1aa81;
+  }
   .items {
     text-align: center;
     font-size: 16px;
@@ -100,21 +245,278 @@ h2 {
       width: 510px;
       margin-right: 140px;
       @include clearfix();
+      margin-bottom: 95px;
+      border-bottom: 5px solid #c1aa81;
+
+      &:first-child .ico {
+        text-align: left;
+      }
+
+      &:nth-child(2n), &:last-child {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      p {
+        margin: 10px 0;
+      }
 
       .ico {
+        width: 170px;
         float: left;
+        text-align: center;
       }
 
       .text {
         overflow: hidden;
+        line-height: 1.6;
       }
 
       h4 {
         font-size: 36px;
         font-family: $philosopher-regular;
         margin: 0;
+        line-height: 1;
       }
     }
   }
 
+}
+
+.section-about {
+  background: #f4f4f4;
+  padding: 92px 0;
+
+  h2 {
+    color: #c1aa81;
+    margin-bottom: 40px;
+  }
+
+  .left-part {
+    float: left;
+    margin-right: 100px;
+  }
+
+  h4 {
+    margin: 0 0 30px;
+    font-size: 24px;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+      @include pseudo-block($top: -60px, $left: -38px);
+      width: 74px;
+      height: 74px;
+      background: #c1aa81;
+      z-index: -1;
+    }
+  }
+
+  .text-wrapper {
+    color: #555555;
+    font-size: 16px;
+    height: 288px;
+    overflow-y: scroll;
+    line-height: 1.4;
+    margin-bottom: 20px;
+
+    p {
+      margin: 0 0 30px;
+    }
+
+    .text {
+      padding-right: 20px;
+    }
+  }
+}
+
+.section-uslug {
+  padding: 60px 0 100px;
+
+  .text {
+    padding-right: 210px;
+  }
+
+  p {
+    color: #9b9b9b;
+    line-height: 1.5;
+    font-size: 15px;
+  }
+}
+
+.section-types {
+  padding: 80px 0 120px;
+  background: image-url('bg/bg-2.jpg');
+  @include background-size(cover);
+
+  .container {
+    max-width: 970px;
+  }
+
+  h2 {
+    margin: 0 0 15px;
+    color: #fff;
+    line-height: 1;
+  }
+
+  h3 {
+    font-size: 36px;
+    color: #627ba0;
+    margin: 0 0 28px;
+    font-family: $philosopher-regular;
+  }
+
+  .item {
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+
+    &.active {
+
+      a:before {
+        @include transform(translateY(-50%));
+      }
+
+      .text {
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+        left: auto;
+        top: auto;
+      }
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      position: relative;
+      color: #fff;
+      background: #627ba0;
+      font-size: 24px;
+      padding: 8px 20px;
+
+      &:before {
+        @include pseudo-block($top: 50%, $right: 30px);
+        @include oneline-sprite-box($icons, arr-btn);
+        @include transform(rotate(-180deg) translateY(50%));
+      }
+    }
+
+    .text {
+      color: #a2b2cb;
+      font-size: 18px;
+      padding: 10px 18px;
+      line-height: 1.4;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 100%;
+      left: -100%;
+      @include transition(opacity .3s, visibility .3s);
+    }
+  }
+}
+
+.section-info {
+  text-align: center;
+
+  .col {
+    position: relative;
+    z-index: 1;
+
+    &:first-child {
+      padding: 120px 0;
+
+      &:before {
+        @include pseudo-block($top: 0, $right: 0, $bottom: 0);
+        background: #c1aa81;
+        width: 2000px;
+        z-index: -1;
+      }
+
+      .item {
+        margin: 0 0 30px;
+
+        strong {
+          display: block;
+          font-size: 20px;
+          color: #796644;
+          margin-bottom: 8px;
+        }
+      }
+
+      .name, .tel, .desc {
+        color: #fff;
+      }
+
+      .name {
+        font-size: 24px;
+        font-family: $philosopher-regular;
+      }
+
+      .tel {
+        font-size: 36px;
+        font-family: $scada-bold;
+      }
+
+      .desc {
+        font-size: 24px;
+      }
+    }
+
+    &:last-child {
+      padding: 70px 0;
+
+      &:before {
+        @include pseudo-block($top: 0, $left: 0, $bottom: 0);
+        background-image: image-url('bg/form-bg-2.png');
+        width: 2000px;
+        z-index: -1;
+      }
+
+      h3 {
+        margin: 0 0 10px;
+        font-size: 24px;
+        color: #fff;
+        font-family: $philosopher-regular;
+      }
+
+      h4 {
+        margin: 0 0 40px;
+        color: #95a3b7;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.section-map #map {
+  height: 400px;
+}
+
+.footer-wrapper {
+  background: #000;
+  color: #767676;
+  text-align: center;
+  padding: 25px 0;
+
+  .social {
+    display: inline-block;
+  }
+
+  .left-part {
+    float: left;
+  }
+
+  .right-part {
+    float: right;
+
+    span, img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
 }

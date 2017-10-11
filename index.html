@@ -7,13 +7,19 @@
   <meta name="viewport" content="user-scalable=yes, width=device-width"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <script type="text/javascript" src="theme/js/lib/html5.js"></script>
-  <script type="text/javascript" src="theme/js/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="theme/js/lib/mousewheel.js"></script>
+  <script type="text/javascript" src="theme/js/lib/scrollpane.min.js"></script>
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRV9R6qnXAeK-Gadj-rI2JDe-Kab_GvqU&callback=initMap">
+  </script>
   <script type="text/javascript" src="theme/js/js.js"></script>
   <link href="theme/css/styles.css" rel="stylesheet" type="text/css">
 </head>
 
 
 <body>
+<div class="outer-wrapper">
 <header class="header-wrapper">
   <div class="header container">
     <a href="#" class="logo"><img src="theme/images/logo.png" alt=""/></a>
@@ -38,131 +44,132 @@
 
 <div class="content-wrapper">
 
-  <section class="section-top">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <h1>Адвокат
-            по уголовным делам</h1>
+<section class="section-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1>Адвокат
+          по уголовным делам</h1>
 
-          <div class="items">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="item">
-                  <div class="img"><img src="theme/images/tmp/item-1.png" alt=""/></div>
-                  <p>Конфединциально</p>
-                </div>
-              </div>
-
-              <div class="col-sm-6">
-                <div class="item">
-                  <div class="img"><img src="theme/images/tmp/item-2.png" alt=""/></div>
-                  <p>Профессионально </p>
-                </div>
-              </div>
-
-              <div class="col-sm-6">
-                <div class="item">
-                  <div class="img"><img src="theme/images/tmp/item-3.png" alt=""/></div>
-                  <p>Круглосуточно </p>
-                </div>
-              </div>
-
-              <div class="col-sm-6">
-                <div class="item">
-                  <div class="img"><img src="theme/images/tmp/item-4.png" alt=""/></div>
-                  <p>Оптимально</p>
-                </div>
+        <div class="items">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="item">
+                <div class="img"><img src="theme/images/tmp/item-1.png" alt=""/></div>
+                <p>Конфединциально</p>
               </div>
             </div>
 
+            <div class="col-sm-6">
+              <div class="item">
+                <div class="img"><img src="theme/images/tmp/item-2.png" alt=""/></div>
+                <p>Профессионально </p>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="item">
+                <div class="img"><img src="theme/images/tmp/item-3.png" alt=""/></div>
+                <p>Круглосуточно </p>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="item">
+                <div class="img"><img src="theme/images/tmp/item-4.png" alt=""/></div>
+                <p>Оптимально</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-advantages">
+  <div class="container">
+    <div class="form-wrapper row">
+      <div class="text col-sm-3">
+        <p>
+          <strong>Бесплатная
+            экспрес консультация </strong>
+        </p>
+
+        <p>
+          Адвокат свяжется с Вами
+          в течении 3-х минут
+        </p>
+      </div>
+
+      <div class="col-sm-9">
+        <div class="form">
+          <div class="textfield">
+            <input type="text" placeholder="Ваше имя"/>
+            <input type="text" placeholder="Ваш телефон"/>
+            <input type="text" placeholder="Вашая ситуацыя"/>
+          </div>
+          <div class="form-checker">
+            <input type="checkbox" id="check-1"/>
+            <label for="check-1">Согласие на обработку персональной информации</label>
+          </div>
+          <div class="btn-wrap style-b">
+            <input type="submit" value="Записатся" class="btn"/>
           </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="section-advantages">
-    <div class="conatiner">
-      <div class="form-wrapper row">
-        <div class="text col-sm-3">
-          <p>
-            <strong>Бесплатная
-              экспрес консультация </strong>
-          </p>
+    <h2>Преимущества</h2>
 
-          <p>
-            Адвокат свяжется с Вами
-            в течении 3-х минут
-          </p>
-        </div>
+    <div class="items">
+      <div class="item">
+        <div class="ico"><img src="theme/images/icons/ico-1.png" alt=""/></div>
+        <div class="text">
+          <h4>Опыт</h4>
 
-        <div class="col-sm-9">
-          <div class="form">
-            <div class="textfield">
-              <input type="text" placeholder="Ваше имя"/>
-              <input type="text" placeholder="Ваш телефон"/>
-              <input type="text" placeholder="Вашая ситуацыя"/>
-            </div>
-            <div class="form-checker">
-              <input type="checkbox" id="check-1"/>
-              <label for="check-1">Согласие на обработку персональной информации</label>
-            </div>
-            <div class="btn-wrap style-b">
-              <input type="submit" value="Записатся"/>
-            </div>
-          </div>
+          <p>Более 10-летний опыт работы.
+            Строго следую профессиональным принципам</p>
         </div>
       </div>
 
-      <h2>Преимущества</h2>
+      <div class="item">
+        <div class="ico"><img src="theme/images/icons/ico-2.png" alt=""/></div>
+        <div class="text">
+          <h4>Конкретика</h4>
 
-      <div class="items">
-        <div class="item">
-          <div class="ico"><img src="theme/images/icons/ico-1.png" alt=""/></div>
-          <div class="text">
-            <h4>Опыт</h4>
-
-            <p>Более 10-летний опыт работы.
-              Строго следую профессиональным принципам</p>
-          </div>
+          <p>Вы получаете адвоката с четкой
+            специализацией именно по Вашему вопросу</p>
         </div>
+      </div>
 
-        <div class="item">
-          <div class="ico"><img src="theme/images/icons/ico-2.png" alt=""/></div>
-          <div class="text">
-            <h4>Конкретика</h4>
+      <div class="item">
+        <div class="ico"><img src="theme/images/icons/ico-3.png" alt=""/></div>
+        <div class="text">
+          <h4>Гарантия</h4>
 
-            <p>Вы получаете адвоката с четкой
-              специализацией именно по Вашему вопросу</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="ico"><img src="theme/images/icons/ico-3.png" alt=""/></div>
-          <div class="text">
-            <h4>Гарантия</h4>
-
-            <p>Гарантия порядочности и конфиденциальности при ведении дела</p>
-          </div>
+          <p>Гарантия порядочности и конфиденциальности при ведении дела</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section-about">
-    <div class="container">
-      <h2>Обо мне</h2>
+<section class="section-about">
+  <div class="container">
+    <h2>Обо мне</h2>
 
-      <div class="parts-wrapper">
-        <div class="left-part">
-          <img src="theme/images/tmp/img-1.png" alt=""/>
-        </div>
-        <div class="right-part">
-          <h4>Рад приветствовать вас на моем сайте </h4>
+    <div class="parts-wrapper row">
+      <div class="col-sm-5">
+        <img src="theme/images/tmp/img-1.png" alt=""/>
+      </div>
+      <div class="col-sm-6">
+        <h4>Рад приветствовать вас на моем сайте </h4>
 
-          <div class="text-wrapper">
+        <div class="text-wrapper scroll-pane">
 
+          <div class="text">
             <p>
               Прежде всего расскажу немного о себе: Я окончил юридический факультет Казанского
               Государственного
@@ -197,21 +204,47 @@
               десяток граждан.
             </p>
 
+            <p>
+              Многолетний Опыт, накопленный мною за время моей адвокатской практики, всегда позволяет мне
+              найти самый
+              оптимальный вариант защиты моего доверителя в судебном производстве. Ко всему,
+              неукоснительное следование
+              адвокатской этике, в частности, полное соблюдение закона об адвокатуре и совершенная
+              недопустимость
+              какого-либо разглашения информации, полученной от клиентов, позволили мне успешно защитить
+              уже не один
+              десяток граждан.
+            </p>
+
+            <p>
+              Многолетний Опыт, накопленный мною за время моей адвокатской практики, всегда позволяет мне
+              найти самый
+              оптимальный вариант защиты моего доверителя в судебном производстве. Ко всему,
+              неукоснительное следование
+              адвокатской этике, в частности, полное соблюдение закона об адвокатуре и совершенная
+              недопустимость
+              какого-либо разглашения информации, полученной от клиентов, позволили мне успешно защитить
+              уже не один
+              десяток граждан.
+            </p>
           </div>
 
-          <div class="btn-wrap style-a">
-            <a href="#" class="btn">Обсудить проблему</a>
-          </div>
         </div>
 
+        <div class="btn-wrap style-a">
+          <a href="#" class="btn">Обсудить проблему</a>
+        </div>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section-uslug">
-    <div class="conatiner">
-      <h2>Услуги</h2>
+<section class="section-uslug">
+  <div class="container">
+    <h2>Услуги</h2>
 
+    <div class="text">
       <p>
         Консультация при личной встрече с адвокатом рекомендуется тогда, когда вопрос достаточно объемный, и Вам
         необходимо получить развернутую юридическую консультацию со ссылками на нормы законодательства в случае
@@ -219,94 +252,95 @@
         судах
       </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section-types">
-    <div class="conatiner">
-      <h2>Выди приступлений </h2>
+<section class="section-types">
+  <div class="container">
+    <h2>Выди приступлений </h2>
 
-      <h3>по которым я работаю</h3>
+    <h3>по которым я работаю</h3>
 
-      <div class="accordion-wrapper">
-        <div class="item">
-          <a href="#">Против личности </a>
+    <div class="accordion-wrapper">
+      <div class="item">
+        <a href="#">Против личности </a>
 
-          <div class="text">
-            Хочу выразить огромную благодарность Булату Хусаиновичу за квалифицированную помощь и поддержку в деле моего
-            мужа, которому грозил тюремный срок за разбой. На протяжении рассмотрения его дела адвокат всегда был с нами
-            на связи, давал профессиональную консультацию и оценку ситуации. В итоге мужа освободили в зале суда и дело
-            закрыто. Ещё раз спасибо!
-          </div>
+        <div class="text">
+          Хочу выразить огромную благодарность Булату Хусаиновичу за квалифицированную помощь и поддержку в деле моего
+          мужа, которому грозил тюремный срок за разбой. На протяжении рассмотрения его дела адвокат всегда был с нами
+          на связи, давал профессиональную консультацию и оценку ситуации. В итоге мужа освободили в зале суда и дело
+          закрыто. Ещё раз спасибо!
         </div>
+      </div>
 
-        <div class="item">
-          <a href="#">В сфере економики </a>
+      <div class="item">
+        <a href="#">В сфере економики </a>
 
-          <div class="text">
-            Хочу выразить огромную благодарность Булату Хусаиновичу за квалифицированную помощь и поддержку в деле моего
-            мужа, которому грозил тюремный срок за разбой. На протяжении рассмотрения его дела адвокат всегда был с нами
-            на связи, давал профессиональную консультацию и оценку ситуации. В итоге мужа освободили в зале суда и дело
-            закрыто. Ещё раз спасибо!
-          </div>
+        <div class="text">
+          Хочу выразить огромную благодарность Булату Хусаиновичу за квалифицированную помощь и поддержку в деле моего
+          мужа, которому грозил тюремный срок за разбой. На протяжении рассмотрения его дела адвокат всегда был с нами
+          на связи, давал профессиональную консультацию и оценку ситуации. В итоге мужа освободили в зале суда и дело
+          закрыто. Ещё раз спасибо!
         </div>
+      </div>
 
-        <div class="item">
-          <a href="#">Против военной службы </a>
+      <div class="item">
+        <a href="#">Против военной службы </a>
 
-          <div class="text">
-            Хочу выразить огромную благодарность Булату Хусаиновичу за квалифицированную помощь и поддержку в деле моего
-            мужа, которому грозил тюремный срок за разбой. На протяжении рассмотрения его дела адвокат всегда был с нами
-            на связи, давал профессиональную консультацию и оценку ситуации. В итоге мужа освободили в зале суда и дело
-            закрыто. Ещё раз спасибо!
-          </div>
+        <div class="text">
+          Хочу выразить огромную благодарность Булату Хусаиновичу за квалифицированную помощь и поддержку в деле моего
+          мужа, которому грозил тюремный срок за разбой. На протяжении рассмотрения его дела адвокат всегда был с нами
+          на связи, давал профессиональную консультацию и оценку ситуации. В итоге мужа освободили в зале суда и дело
+          закрыто. Ещё раз спасибо!
         </div>
+      </div>
 
-        <div class="item">
-          <a href="#">Против военной службы </a>
+      <div class="item">
+        <a href="#">Против военной службы </a>
 
-          <div class="text">
-            Хочу выразить огромную благодарность Булату Хусаиновичу за квалифицированную помощь и поддержку в деле моего
-            мужа, которому грозил тюремный срок за разбой. На протяжении рассмотрения его дела адвокат всегда был с нами
-            на связи, давал профессиональную консультацию и оценку ситуации. В итоге мужа освободили в зале суда и дело
-            закрыто. Ещё раз спасибо!
-          </div>
+        <div class="text">
+          Хочу выразить огромную благодарность Булату Хусаиновичу за квалифицированную помощь и поддержку в деле моего
+          мужа, которому грозил тюремный срок за разбой. На протяжении рассмотрения его дела адвокат всегда был с нами
+          на связи, давал профессиональную консультацию и оценку ситуации. В итоге мужа освободили в зале суда и дело
+          закрыто. Ещё раз спасибо!
         </div>
+      </div>
 
-        <div class="item">
-          <a href="#">Против Общественной безопасности и порядка</a>
+      <div class="item">
+        <a href="#">Против Общественной безопасности и порядка</a>
 
-          <div class="text">
-            Хочу выразить огромную благодарность Булату Хусаиновичу за квалифицированную помощь и поддержку в деле моего
-            мужа, которому грозил тюремный срок за разбой. На протяжении рассмотрения его дела адвокат всегда был с нами
-            на связи, давал профессиональную консультацию и оценку ситуации. В итоге мужа освободили в зале суда и дело
-            закрыто. Ещё раз спасибо!
-          </div>
+        <div class="text">
+          Хочу выразить огромную благодарность Булату Хусаиновичу за квалифицированную помощь и поддержку в деле моего
+          мужа, которому грозил тюремный срок за разбой. На протяжении рассмотрения его дела адвокат всегда был с нами
+          на связи, давал профессиональную консультацию и оценку ситуации. В итоге мужа освободили в зале суда и дело
+          закрыто. Ещё раз спасибо!
         </div>
+      </div>
 
-        <div class="item">
-          <a href="#">Против мира и безопасности человека</a>
+      <div class="item">
+        <a href="#">Против мира и безопасности человека</a>
 
-          <div class="text">
-            Хочу выразить огромную благодарность Булату Хусаиновичу за квалифицированную помощь и поддержку в деле моего
-            мужа, которому грозил тюремный срок за разбой. На протяжении рассмотрения его дела адвокат всегда был с нами
-            на связи, давал профессиональную консультацию и оценку ситуации. В итоге мужа освободили в зале суда и дело
-            закрыто. Ещё раз спасибо!
-          </div>
+        <div class="text">
+          Хочу выразить огромную благодарность Булату Хусаиновичу за квалифицированную помощь и поддержку в деле моего
+          мужа, которому грозил тюремный срок за разбой. На протяжении рассмотрения его дела адвокат всегда был с нами
+          на связи, давал профессиональную консультацию и оценку ситуации. В итоге мужа освободили в зале суда и дело
+          закрыто. Ещё раз спасибо!
         </div>
+      </div>
 
-        <div class="item">
-          <a href="#">Против государственной власти</a>
+      <div class="item">
+        <a href="#">Против государственной власти</a>
 
-          <div class="text">
-            Хочу выразить огромную благодарность Булату Хусаиновичу за квалифицированную помощь и поддержку в деле моего
-            мужа, которому грозил тюремный срок за разбой. На протяжении рассмотрения его дела адвокат всегда был с нами
-            на связи, давал профессиональную консультацию и оценку ситуации. В итоге мужа освободили в зале суда и дело
-            закрыто. Ещё раз спасибо!
-          </div>
+        <div class="text">
+          Хочу выразить огромную благодарность Булату Хусаиновичу за квалифицированную помощь и поддержку в деле моего
+          мужа, которому грозил тюремный срок за разбой. На протяжении рассмотрения его дела адвокат всегда был с нами
+          на связи, давал профессиональную консультацию и оценку ситуации. В итоге мужа освободили в зале суда и дело
+          закрыто. Ещё раз спасибо!
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 <section class="section-review">
   <div class="container">
@@ -318,28 +352,64 @@
   <div class="container">
     <div class="row">
       <div class="col col-sm-6">
-        Уголовний адвокат
-        Мутыгуллин  Булат Хусаинович
-        Звоните прямо сейчас
-        +7(904) 660-26-26
-        Адрес:
-        ул. Нурсултана Назарбаева, д. 12
+        <div class="item">
+          <strong>Уголовний адвокат</strong>
+          <span class="name">Мутыгуллин  Булат Хусаинович</span>
+        </div>
+        <div class="item">
+          <strong>Звоните прямо сейчас</strong>
+          <span class="tel">+7(904) 660-26-26</span>
+        </div>
+        <div class="item">
+          <strong>Адрес:</strong>
+          <span class="desc">ул. Нурсултана Назарбаева, д. 12</span>
+        </div>
       </div>
 
       <div class="col col-sm-6">
-        Бесплатная экспрес консультация
-        Адвокат свяжется с Вами в течении 3-х минут
+        <h3>Бесплатная экспрес консультация</h3>
+        <h4>Адвокат свяжется с Вами в течении 3-х минут</h4>
+        <div class="form-wrapper">
+          <div class="text-fields">
+            <input type="text" placeholder="Ваше имя"/>
+            <input type="text" placeholder="Ваш телефон"/>
+          </div>
+          <textarea placeholder="Вашая ситуацыя"></textarea>
+          <div class="form-checker">
+            <input type="checkbox" id="check-2"/>
+            <label for="check-2">Согласие на обработку персональной информации</label>
+          </div>
+          <div class="btn-wrap style-b">
+            <input type="submit" value="Записатся" class="btn"/>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+<section class="section-map">
+  <div class="map" id="map">
+    <img src="theme/images/tmp/map.jpg" alt=""/>
   </div>
 </section>
 </div>
 
 
 <footer class="footer-wrapper">
-  <div class="footer">
+  <div class="footer container">
+    <div class="left-part">
+      Все права защищены © 2017
+    </div>
+    <div class="social">
+      <a href="#"><img src="theme/images/tmp/vk.png" alt=""/></a>
+    </div>
 
+    <div class="right-part">
+      <span>Разработано:</span>
+      <img src="theme/images/tmp/logo-dev.png" alt=""/>
+    </div>
   </div>
 </footer>
+</div>
 </body>
 </html>
