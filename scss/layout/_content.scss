@@ -16,7 +16,7 @@
     }
   }
 
-  &.style-b .btn {
+  &.style-b .btn, &.style-c .btn {
     padding: 11px 54px;
     border: 2px solid #fff;
     color: #fff;
@@ -25,36 +25,80 @@
     @include border-radius(30px);
     background: transparent;
     letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  &.style-b .btn {
 
     &:hover {
       background: #fff;
       color: #c1aa81;
     }
   }
+
+  &.style-c .btn {
+
+    &:hover {
+      background: #fff;
+      color: #435a7d;
+    }
+  }
 }
 
 h2 {
-  font-size: 60px;
+  font-size: 36px;
   margin: 0;
   font-family: $philosopher-regular;
+
+  @media (min-width: $bp-small) {
+    font-size: 60px;
+  }
 }
 
 .section-top {
-  padding: 222px 0 204px;
+  padding: 132px 0 110px;
   background: image-url('bg/bg-1.jpg');
   @include background-size(cover);
 
+  @media (min-width: $bp-small) {
+    padding: 235px 0 204px;
+  }
+
+  @media (min-width: $bp-middle) {
+    padding: 222px 0 204px;
+  }
+
   h1 {
-    font-size: 60px;
+    font-size: 36px;
     font-family: $philosopher-regular;
     color: #fff;
     margin: 0 0 55px;
+
+    @media (min-width: $bp-small) {
+      font-size: 60px;
+    }
   }
 
   .item {
-    font-size: 24px;
+    font-size: 18px;
     color: #fff;
     margin-bottom: 40px;
+    text-align: center;
+
+    @media (min-width: $bp-small) {
+      font-size: 24px;
+      text-align: left;
+    }
+
+    .img {
+      width: 40px;
+      margin: 0 auto;
+
+      @media (min-width: $bp-small) {
+        width: auto;
+      }
+    }
 
     p {
       margin: 15px 0 0;
@@ -67,12 +111,15 @@ h2 {
   input[type="text"], textarea {
     background: rgba(255, 255, 255, 0.21);
     padding: 14px 18px;
-    width: 240px;
-    margin-right: 15px;
+    width: 199px;
     color: rgba(255, 255, 255, 0.70);
     border: none;
     @include input-placeholder(rgba(255, 255, 255, 0.70));
     @include border-radius(4px);
+
+    @media (min-width: $bp-middle) {
+      width: 240px;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -128,11 +175,28 @@ h2 {
 }
 
 .section-advantages {
-  padding-bottom: 150px;
+  padding-bottom: 90px;
 
+  @media (min-width: $bp-small) {
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $bp-middle) {
+    padding-bottom: 150px;
+  }
   .form-wrapper {
-    padding: 30px 0;
-    margin-bottom: 47px;
+    padding: 10px 0;
+    margin-bottom: 37px;
+
+    @media (min-width: $bp-small) {
+      padding: 41px 0;
+      margin-bottom: 7px;
+    }
+
+    @media (min-width: $bp-middle) {
+      padding: 30px 0;
+      margin-bottom: 47px;
+    }
 
     strong {
       font-family: $philosopher-regular;
@@ -145,16 +209,58 @@ h2 {
       font-size: 16px;
     }
 
+    input[type="text"] {
+      margin-bottom: 13px;
+
+      @media (max-width: $bp-small) {
+        width: 100%;
+      }
+
+      &:first-child {
+        margin-right: 12px;
+      }
+
+      @media (min-width: $bp-middle) {
+        margin-right: 15px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .form-text {
+
+      @media (max-width: $bp-small) {
+        height: 85px;
+      }
+
+      @media (max-width: $bp-middle) {
+        width: 100%;
+      }
+    }
+
     .form {
       background-color: #c1aa81;
-      background-image: image-url('bg/form-bg.png');
+      background-image: image-url('bg/form-bg-3.png');
       background-repeat: no-repeat;
-      background-position: right;
-
-      padding: 55px 60px 45px 0;
+      background-position: right bottom;
+      padding: 55px 35px 45px 0;
       margin-left: 50px;
       position: relative;
-      margin-top: -57px;
+
+      @media (min-width: $bp-small) {
+        margin-top: -57px;
+        padding: 55px 60px 45px 0;
+        background-image: image-url('bg/form-bg.png');
+        background-position: 35px;
+        background-size: cover;
+      }
+
+      @media (min-width: $bp-middle) {
+        background-position: right;
+        background-size: contain;
+      }
 
       &:before {
         @include pseudo-block($top: 0, $right: 100%, $bottom: 0);
@@ -174,20 +280,42 @@ h2 {
     color: #c1aa81;
   }
   .items {
-    text-align: center;
     font-size: 16px;
+
+    @media (min-width: $bp-middle) {
+      text-align: center;
+    }
 
     .item {
       text-align: left;
       display: inline-block;
-      width: 510px;
-      margin-right: 144px;
       @include clearfix();
-      margin-bottom: 95px;
+      margin-bottom: 40px;
       border-bottom: 5px solid #c1aa81;
 
-      &:first-child .ico {
-        text-align: left;
+      @media (min-width: $bp-small) {
+        width: 510px;
+        margin-bottom: 60px;
+      }
+
+      @media (min-width: $bp-middle) {
+        margin-right: 144px;
+        margin-left: 0;
+        margin-bottom: 95px;
+      }
+
+      &:first-child {
+
+        .ico {
+          text-align: left;
+        }
+      }
+
+      &:nth-child(2) {
+
+        @media (min-width: $bp-small) and (max-width: $bp-middle) {
+          margin-left: 85px;
+        }
       }
 
       &:nth-child(2n), &:last-child {
@@ -196,6 +324,10 @@ h2 {
 
       &:last-child {
         margin-bottom: 0;
+
+        @media (min-width: $bp-small) and (max-width: $bp-middle) {
+          margin-left: 180px;
+        }
       }
 
       p {
@@ -203,14 +335,22 @@ h2 {
       }
 
       .ico {
-        width: 170px;
-        float: left;
-        text-align: center;
+        margin-bottom: 18px;
+
+        @media (min-width: $bp-small) {
+          float: left;
+          margin-bottom: 0;
+          width: 170px;
+          text-align: center;
+        }
       }
 
       .text {
-        overflow: hidden;
         line-height: 1.6;
+
+        @media (min-width: $bp-small) {
+          overflow: hidden;
+        }
       }
 
       h4 {
@@ -226,7 +366,11 @@ h2 {
 
 .section-about {
   background: #f4f4f4;
-  padding: 105px 0 100px;
+  padding: 50px 0;
+
+  @media (min-width: $bp-small) {
+    padding: 52px 0 62px;
+  }
 
   h2 {
     color: #c1aa81;
@@ -244,26 +388,48 @@ h2 {
 
   h4 {
     margin: 0 0 30px;
-    font-size: 24px;
+    font-size: 18px;
     position: relative;
     z-index: 1;
 
+    @media (min-width: $bp-small) {
+      font-size: 24px;
+    }
+
     &:before {
-      @include pseudo-block($top: -60px, $left: -38px);
-      width: 74px;
-      height: 74px;
+      @include pseudo-block();
+      top: -43px;
+      left: -14px;
+      width: 56px;
+      height: 56px;
       background: #c1aa81;
       z-index: -1;
+
+      @media (min-width: $bp-middle) {
+        top: -60px;
+        left: -38px;
+        width: 74px;
+        height: 74px;
+      }
     }
   }
 
   .text-wrapper {
     color: #555555;
-    font-size: 16px;
-    height: 288px;
+    font-size: 14px;
+    height: 200px;
     overflow-y: scroll;
     line-height: 1.4;
     margin-bottom: 20px;
+
+    @media (min-width: $bp-small) {
+      font-size: 16px;
+      height: 255px;
+    }
+
+    @media (min-width: $bp-middle) {
+      height: 288px;
+    }
 
     p {
       margin: 0 0 30px;
@@ -279,15 +445,19 @@ h2 {
   padding: 49px 0 107px;
 
   .text {
-    padding-right: 210px;
-    margin: 10px 0 45px;
+    margin: 10px 0 25px;
+
+    @media (min-width: $bp-small) {
+      padding-right: 210px;
+      margin: 10px 0 45px;
+    }
   }
 
   p {
     margin: 0;
     color: #9b9b9b;
     line-height: 1.5;
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .item {
@@ -346,9 +516,13 @@ h2 {
 }
 
 .section-types {
-  padding: 80px 0 120px;
+  padding: 50px 0 70px;
   background: image-url('bg/bg-2.jpg');
   @include background-size(cover);
+
+  @media (min-width: $bp-small) {
+    padding: 80px 0 120px;
+  }
 
   .container {
     max-width: 900px;
@@ -361,10 +535,14 @@ h2 {
   }
 
   h3 {
-    font-size: 36px;
+    font-size: 18px;
     color: #627ba0;
     margin: 0 0 28px;
     font-family: $philosopher-regular;
+
+    @media (min-width: $bp-small) {
+      font-size: 36px;
+    }
   }
 
   .item {
@@ -393,8 +571,12 @@ h2 {
       position: relative;
       color: #fff;
       background: #627ba0;
-      font-size: 24px;
+      font-size: 18px;
       padding: 8px 20px;
+
+      @media (min-width: $bp-small) {
+        font-size: 24px;
+      }
 
       &:before {
         @include pseudo-block($top: 50%, $right: 30px);
@@ -405,7 +587,7 @@ h2 {
 
     .text {
       color: #a2b2cb;
-      font-size: 18px;
+      font-size: 14px;
       padding: 10px 18px;
       line-height: 1.4;
       opacity: 0;
@@ -414,13 +596,21 @@ h2 {
       top: 100%;
       left: -100%;
       @include transition(opacity .3s, visibility .3s);
+
+      @media (min-width: $bp-small) {
+        font-size: 18px;
+      }
     }
   }
 }
 
 .section-review {
-  padding: 150px 0 18px;
+  padding: 100px 0 18px;
   text-align: center;
+
+  @media (min-width: $bp-small) {
+    padding: 150px 0 18px;
+  }
 
   .container {
     max-width: 970px;
@@ -490,13 +680,26 @@ h2 {
     z-index: 1;
 
     &:first-child {
-      padding: 120px 0;
+      padding: 50px 0;
+
+      @media (min-width: $bp-middle) {
+        padding: 120px 0;
+      }
 
       &:before {
-        @include pseudo-block($top: 0, $right: 0, $bottom: 0);
+        @include pseudo-block($top: 0, $left: 50%, $bottom: 0);
         background: #c1aa81;
         width: 2000px;
+        @include translateX(-50%);
         z-index: -1;
+
+        @media (min-width: $bp-middle) {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: auto;
+          @include translateX(0);
+        }
       }
 
       .item {
@@ -504,9 +707,13 @@ h2 {
 
         strong {
           display: block;
-          font-size: 20px;
+          font-size: 16px;
           color: #796644;
           margin-bottom: 8px;
+
+          @media (min-width: $bp-small) {
+            font-size: 20px;
+          }
         }
       }
 
@@ -520,8 +727,12 @@ h2 {
       }
 
       .tel {
-        font-size: 36px;
+        font-size: 30px;
         font-family: $scada-bold;
+
+        @media (min-width: $bp-small) {
+          font-size: 36px;
+        }
       }
 
       .desc {
@@ -530,13 +741,27 @@ h2 {
     }
 
     &:last-child {
-      padding: 80px 0;
+      padding: 45px 0;
+
+      @media (min-width: $bp-middle) {
+        padding: 80px 0;
+      }
 
       &:before {
-        @include pseudo-block($top: 0, $left: 0, $bottom: 0);
+        @include pseudo-block($top: 0, $left: 50%, $bottom: 0);
         background-image: image-url('bg/form-bg-2.png');
+        background-repeat: no-repeat;
+        @include background-size(cover);
         width: 2000px;
+        @include translateX(-50%);
         z-index: -1;
+
+        @media (min-width: $bp-middle) {
+          top: 0;
+          bottom: 0;
+          left: 0;
+          @include translateX(0);
+        }
       }
 
       h3 {
@@ -547,17 +772,38 @@ h2 {
       }
 
       h4 {
-        margin: 0 0 40px;
-        color: #95a3b7;
+        margin: 0 0 30px;
+        color: #fff;
         font-size: 16px;
+
+        @media (min-width: $bp-small) {
+          color: #95a3b7;
+          margin: 0 0 40px;
+        }
       }
     }
 
     .form-wrapper {
       padding: 0 40px;
 
+      .text-fields .el {
+
+        @media (max-width: $bp-small) {
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
       .text-fields, textarea {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+
+        @media (min-width: $bp-small) {
+          margin-bottom: 20px;
+        }
+
       }
 
       .el {
@@ -591,18 +837,139 @@ h2 {
 
   .social {
     display: inline-block;
+
+    @media (max-width: $bp-small) {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      @include translate(-50%, -50%);
+    }
   }
 
   .left-part {
     float: left;
+    width: 95px;
+    text-align: left;
+    font-size: 11px;
+
+    @media (min-width: $bp-small) {
+      width: auto;
+      font-size: 14px;
+    }
   }
 
   .right-part {
     float: right;
+    width: 90px;
+    text-align: left;
+    font-size: 11px;
+
+    @media (min-width: $bp-small) {
+      width: auto;
+      text-align: right;
+      font-size: 14px;
+    }
+
+    span {
+      margin-bottom: 3px;
+    }
 
     span, img {
       display: inline-block;
       vertical-align: middle;
+    }
+  }
+}
+
+.modal {
+
+  &:before {
+    @include pseudo-block($top: 0, $left: 0, $right: 0);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.51);
+  }
+
+  .close {
+    position: absolute;
+    background: none;
+    border: none;
+    top: 0px;
+    right: 0px;
+    color: #fff;
+    font-size: 26px;
+  }
+
+  .modal-content {
+    background: #435a7d;
+    @include border-radius(0);
+  }
+
+  &.desc-modal {
+
+    .modal-dialog {
+
+      @media (min-width: $bp-middle) {
+        width: 740px;
+      }
+    }
+
+    .modal-content {
+      font-size: 14px;
+      color: #a2b2cb;
+      padding: 40px 30px 60px;
+
+      @media (min-width: $bp-small) {
+        font-size: 18px;
+      }
+
+      h3 {
+        font-size: 18px;
+        color: #fff;
+        margin: 0 0 20px;
+
+        @media (min-width: $bp-small) {
+          font-size: 24px;
+        }
+      }
+
+      p {
+        margin: 0 0 30px;
+        line-height: 1.4;
+
+        @media (min-width: $bp-small) {
+          margin: 0 0 45px;
+        }
+      }
+    }
+  }
+}
+
+.form-modal {
+
+  .modal-content {
+    max-width: 312px;
+
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 40px 50px;
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #fff;
+      font-family: $philosopher-regular;
+    }
+
+    h4 {
+      margin: 0 0 30px;
+      color: #95a3b7;
+      font-size: 12px;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      margin-bottom: 10px;
     }
   }
 }

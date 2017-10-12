@@ -122,7 +122,7 @@ html[xmlns] .flexslider .slides {
   text-decoration: none;
   display: block;
   position: absolute;
-  top: 50%;
+  bottom: 140px;
   z-index: 10;
   overflow: hidden;
   cursor: pointer;
@@ -131,13 +131,29 @@ html[xmlns] .flexslider .slides {
 
 .flex-prev {
   @include oneline-sprite-box($icons, arr-active);
-  right: 350px;
+  right: 10px;
+
+  @media (min-width: $bp-small) {
+    right: 240px;
+  }
+
+  @media (min-width: $bp-middle) {
+    right: 350px;
+  }
 }
 
 .flex-next {
   @include oneline-sprite-box($icons, arr-dis);
  // @include rotate(180deg);
-  left: 350px;
+  left: 10px;
+
+  @media (min-width: $bp-small) {
+    left: 240px;
+  }
+
+  @media (min-width: $bp-middle) {
+    left: 350px;
+  }
 }
 
 .flex-direction-nav .flex-disabled {

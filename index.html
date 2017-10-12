@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Name</title>
+  <title>Уголовний адвокат</title>
   <meta charset="utf-8"/>
   <meta name="HandheldFriendly" content="false"/>
   <meta name="viewport" content="user-scalable=yes, width=device-width"/>
@@ -9,6 +9,7 @@
   <script type="text/javascript" src="theme/js/lib/html5.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="theme/js/lib/jquery.flexslider.js"></script>
+  <script type="text/javascript" src="theme/js/lib/bootstrap-modal.min.js"></script>
   <script type="text/javascript" src="theme/js/lib/mousewheel.js"></script>
   <script type="text/javascript" src="theme/js/lib/scrollpane.min.js"></script>
   <script async defer
@@ -25,32 +26,33 @@
   <div class="header container">
     <a href="#" class="logo"><img src="theme/images/logo.png" alt=""/></a>
 
-      <a href="#" class="mobile-nav"><span></span></a>
+    <a href="#" class="mobile-nav"><span></span></a>
 
     <nav class="nav">
+      <a href="#" class="mobile-nav-close"></a>
       <ul>
-        <li><a href="#">Главная </a></li>
-        <li><a href="#"> Преимущества </a></li>
-        <li><a href="#"> Обо мне </a></li>
-        <li><a href="#"> Услуги </a></li>
-        <li><a href="#"> Отзывы </a></li>
-        <li><a href="#"> Контакты</a></li>
+        <li><a href="#section-1">Главная </a></li>
+        <li><a href="#section-2"> Преимущества </a></li>
+        <li><a href="#section-3"> Обо мне </a></li>
+        <li><a href="#section-4"> Услуги </a></li>
+        <li><a href="#section-6"> Отзывы </a></li>
+        <li><a href="#section-7"> Контакты</a></li>
       </ul>
     </nav>
 
     <div class="right-part">
       <span class="tel">+7 (904) 660-26-26</span>
-      <a href="#">Заказать звонок</a>
+      <a href="#"  data-toggle="modal" data-target="#modalForm">Заказать звонок</a>
     </div>
   </div>
 </header>
 
 <div class="content-wrapper">
 
-<section class="section-top">
+<section class="section-top" id="section-1">
   <div class="container">
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-md-6">
         <h1>Адвокат
           по уголовным делам</h1>
 
@@ -91,7 +93,7 @@
   </div>
 </section>
 
-<section class="section-advantages">
+<section class="section-advantages"  id="section-2">
   <div class="container">
     <div class="form-wrapper row">
       <div class="text col-sm-3">
@@ -111,7 +113,7 @@
           <div class="textfield">
             <input type="text" placeholder="Ваше имя"/>
             <input type="text" placeholder="Ваш телефон"/>
-            <input type="text" placeholder="Вашая ситуацыя"/>
+            <input type="text" placeholder="Вашая ситуацыя" class="form-text"/>
           </div>
           <div class="form-checker">
             <input type="checkbox" id="check-1"/>
@@ -159,7 +161,7 @@
   </div>
 </section>
 
-<section class="section-about">
+<section class="section-about" id="section-3">
   <div class="container">
     <h2>Обо мне</h2>
 
@@ -235,7 +237,7 @@
         </div>
 
         <div class="btn-wrap style-a">
-          <a href="#" class="btn">Обсудить проблему</a>
+          <a href="#" class="btn" data-toggle="modal" data-target="#modalForm">Обсудить проблему</a>
         </div>
       </div>
 
@@ -243,7 +245,7 @@
   </div>
 </section>
 
-<section class="section-uslug">
+<section class="section-uslug"  id="section-4">
   <div class="container">
     <h2>Услуги</h2>
 
@@ -260,22 +262,26 @@
       <div class="col col-md-6">
         <div class="row">
           <div class="col col-sm-6">
-            <a href="#" class="item big">
+            <a href="#" class="item big" data-toggle="modal" data-target="#modalDesc">
               <img src="theme/images/tmp/tmp-1.png" alt=""/>
+
               <div class="desc">
-                Обжалование постановлений органов дознания, следствия об отказе в возбуждении уголовного дела и иных решений
+                Обжалование постановлений органов дознания, следствия об отказе в возбуждении уголовного дела и иных
+                решений
               </div>
             </a>
           </div>
           <div class="col col-sm-6">
-            <a href="#" class="item">
+            <a href="#" class="item" data-toggle="modal" data-target="#modalDesc1">
               <img src="theme/images/tmp/tmp-2.png" alt=""/>
+
               <div class="desc">
                 Защита на стадии доследственной проверки
               </div>
             </a>
-            <a href="#" class="item">
+            <a href="#" class="item"  data-toggle="modal" data-target="#modalDesc2">
               <img src="theme/images/tmp/tmp-3.jpg" alt=""/>
+
               <div class="desc">
                 Защита подсудимых в судебных инстанциях
               </div>
@@ -287,14 +293,16 @@
       <div class="col col-md-6">
         <div class="row">
           <div class="col col-sm-6">
-            <a href="#" class="item">
+            <a href="#" class="item" data-toggle="modal" data-target="#modalDesc">
               <img src="theme/images/tmp/tmp-4.jpg" alt=""/>
+
               <div class="desc">
                 Защита подозреваемых, обвиняемых на стадии дознания и предварительного следствия
               </div>
             </a>
-            <a href="#" class="item">
+            <a href="#" class="item" data-toggle="modal" data-target="#modalDesc1">
               <img src="theme/images/tmp/tmp-5.jpg" alt=""/>
+
               <div class="desc">
                 Обжалование приговора в апелляционном и кассационном порядке в вышестоящие судебные инстанции
 
@@ -302,15 +310,17 @@
             </a>
           </div>
           <div class="col col-sm-6">
-            <a href="#" class="item">
+            <a href="#" class="item" data-toggle="modal" data-target="#modalDesc2">
               <img src="theme/images/tmp/tmp-6.jpg" alt=""/>
+
               <div class="desc">
                 Обжалование незаконных действий и решений дознавателя, следователя в прокуратуру и судебном порядке
 
               </div>
             </a>
             <a href="#" class="item">
-              <img src="theme/images/tmp/tmp-7.jpg" alt=""/>
+              <img src="theme/images/tmp/tmp-7.jpg" alt="" data-toggle="modal" data-target="#modalDesc1"/>
+
               <div class="desc">
                 Представление интересов потерпевших на стадиях предварительного следствия и суде
               </div>
@@ -322,7 +332,7 @@
   </div>
 </section>
 
-<section class="section-types">
+<section class="section-types"  id="section-5">
   <div class="container">
     <h2>Выди приступлений </h2>
 
@@ -430,7 +440,7 @@
   </div>
 </section>
 
-<section class="section-review">
+<section class="section-review"  id="section-6">
   <div class="container">
     <div class="flexslider">
       <ul class="slides">
@@ -477,10 +487,10 @@
   </div>
 </section>
 
-<section class="section-info">
+<section class="section-info"  id="section-7">
   <div class="container">
     <div class="row">
-      <div class="col col-sm-6">
+      <div class="col col-md-6">
         <div class="item">
           <strong>Уголовний адвокат</strong>
           <span class="name">Мутыгуллин  Булат Хусаинович</span>
@@ -495,7 +505,7 @@
         </div>
       </div>
 
-      <div class="col col-sm-6">
+      <div class="col col-md-6">
         <h3>Бесплатная экспрес консультация</h3>
         <h4>Адвокат свяжется с Вами в течении 3-х минут</h4>
 
@@ -544,6 +554,111 @@
     </div>
   </div>
 </footer>
+</div>
+
+<div class="modal fade desc-modal" id="modalDesc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h3>Защита на стадии доследственной проверки </h3>
+
+        <p>
+          Хочу выразить огромную благодарность Булату Хусаиновичу за квалифицированную помощь и поддержку в деле моего
+          мужа, которому грозил тюремный срок за разбой. На протяжении рассмотрения его дела адвокат всегда был с нами
+          на связи, давал профессиональную консультацию и оценку ситуации. В итоге мужа освободили в зале суда и дело
+          закрыто. Ещё раз спасибо!
+        </p>
+
+        <div class="btn-wrap style-c">
+          <a href="#" class="btn" data-toggle="modal" data-target="#modalForm">Записатся</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade desc-modal" id="modalDesc1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h3>Защита на стадии доследственной проверки </h3>
+
+        <p>
+          Хочу выразить огромную благодарность Булату Хусаиновичу за квалифицированную помощь и поддержку в деле моего
+          мужа, которому грозил тюремный срок за разбой. На протяжении рассмотрения его дела адвокат всегда был с нами
+          на связи, давал профессиональную консультацию и оценку ситуации. В итоге мужа освободили в зале суда и дело
+          закрыто. Ещё раз спасибо!
+        </p>
+
+        <div class="btn-wrap style-c">
+          <a href="#" class="btn" data-toggle="modal" data-target="#modalForm">Записатся</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade desc-modal" id="modalDesc2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h3>Защита на стадии доследственной проверки </h3>
+
+        <p>
+          Хочу выразить огромную благодарность Булату Хусаиновичу за квалифицированную помощь и поддержку в деле моего
+          мужа, которому грозил тюремный срок за разбой. На протяжении рассмотрения его дела адвокат всегда был с нами
+          на связи, давал профессиональную консультацию и оценку ситуации. В итоге мужа освободили в зале суда и дело
+          закрыто. Ещё раз спасибо!
+        </p>
+
+        <div class="btn-wrap style-c">
+          <a href="#" class="btn" data-toggle="modal" data-target="#modalForm">Записатся</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade form-modal" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h3>Бесплатная экспрес консультация</h3>
+        <h4>Адвокат свяжется с Вами в течении 3-х минут</h4>
+
+        <div class="form-wrapper">
+          <div class="text-fields">
+            <input type="text" placeholder="Ваше имя" class="el"/>
+            <input type="text" placeholder="Ваш телефон" class="el"/>
+          </div>
+          <textarea placeholder="Вашая ситуацыя"></textarea>
+          <div class="form-checker">
+            <input type="checkbox" id="check-3"/>
+            <label for="check-3">Согласие на обработку персональной информации</label>
+          </div>
+          <div class="btn-wrap style-c">
+            <input type="submit" value="Записатся" class="btn"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>

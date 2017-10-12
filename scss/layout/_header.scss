@@ -3,24 +3,101 @@
   left: 0;
   right: 0;
   top: 0;
-  padding: 34px 0 0;
   text-align: center;
 
+  .container {
+    padding: 34px 0 0;
+  }
+
   .logo, .right-part {
-    position: absolute;
-    top: 50%;
-    @include translateY(-50%);
-    margin-top: 6px;
+
+    @media (min-width: $bp-middle) {
+      position: absolute;
+      top: 50%;
+      @include translateY(-50%);
+      margin-top: 22px;
+      float: none;
+    }
   }
 
   .logo {
     left: 0;
+    float: left;
+    width: 145px;
+
+    @media (min-width: $bp-small) {
+      width: 250px;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 
   .nav {
     display: inline-block;
-    font-size: 13px;
+    font-size: 17px;
     text-transform: uppercase;
+    z-index: 1;
+
+    @media (max-width: $bp-small) {
+      width: 100%;
+      right: -100%;
+      padding: 100px 0 0 40px;
+    }
+
+    @media (max-width: $bp-middle) {
+      position: fixed;
+      @include transition(right .3s);
+      top: 0;
+      text-align: left;
+      font-size: 18px;
+
+      &:before {
+        @include pseudo-block($top: 0, $left: 0);
+        background: #c1aa81;
+        width: 800px;
+        height: 1500px;
+        z-index: -1;
+      }
+
+      &:after {
+        @include pseudo-block($top: 0, $right: 0);
+        background: rgba(0, 0, 0, 0.5);
+        width: 3000px;
+        height: 1500px;
+        z-index: -2;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(all .2s);
+      }
+
+      .mobile-active & {
+        right: 0;
+
+        &:after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    @media (min-width: $bp-small) and (max-width: $bp-middle) {
+      right: -500px;
+      width: 430px;
+      padding: 110px 0 0 60px;
+    }
+
+    .mobile-nav-close {
+      position: absolute;
+      top: 50px;
+      right: 30px;
+      @include oneline-sprite-box($icons, close);
+
+      @media (min-width: $bp-middle) {
+        display: none;
+      }
+    }
 
     ul {
       margin: 0;
@@ -28,8 +105,15 @@
       list-style: none;
 
       li {
-        display: inline-block;
-        padding: 0 20px;
+
+        @media (max-width: $bp-middle) {
+          margin-bottom: 30px;
+        }
+
+        @media (min-width: $bp-middle) {
+          display: inline-block;
+          padding: 0 9px;
+        }
       }
     }
 
@@ -37,6 +121,10 @@
       color: #fff;
       text-decoration: none;
       position: relative;
+
+      @media (max-width: $bp-middle) {
+        padding-bottom: 12px;
+      }
 
       &:before {
         @include pseudo-block($bottom: -15px, $left: 0, $right: 0);
@@ -54,11 +142,21 @@
   .right-part {
     right: 0;
     text-align: right;
+    float: right;
+    display: none;
+
+    @media (min-width: $bp-small) {
+      display: block;
+    }
+
+    @media (max-width: $bp-middle) {
+      margin-right: 120px;
+    }
 
     .tel {
       display: block;
       font-family: $scada-bold;
-      font-size: 16px;
+      font-size: 19px;
       color: #fff;
       position: relative;
       margin-bottom: 10px;
@@ -80,9 +178,17 @@
   .mobile-nav {
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 39px;
     width: 40px;
     height: 24px;
+
+    @media (min-width: $bp-small) {
+      top: 43px;
+    }
+
+    @media (min-width: $bp-middle) {
+      display: none;
+    }
 
     span, &:before, &:after {
       width: 100%;

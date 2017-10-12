@@ -1,30 +1,57 @@
 (function ($) {
 
-    $(window).load(function() {
-        $('.flexslider').flexslider({
-            animation: "slide",
-          prevText: "",           //String: Set the text for the "previous" directionNav item
-          nextText: "",
-          controlNav:false
-        });
+  $(window).load(function () {
+    $('.flexslider').flexslider({
+      prevText: "",           //String: Set the text for the "previous" directionNav item
+      nextText: "",
+      controlNav: false
+    });
+  });
+
+  $(document).ready(function() {
+    $(".nav ul a").click(function() {
+      var elementClick = $(this).attr("href")
+      var destination = $(elementClick).offset().top;
+      jQuery("html:not(:animated),body:not(:animated)").animate({
+        scrollTop: destination
+      }, 800);
+      return false;
+    });
+  });
+
+  $(window).load(function () {
+    var $btn = $('.mobile-nav'),
+      $btn_close = $('.mobile-nav-close');
+
+    $btn.on('click touch', function (e) {
+      e.preventDefault();
+
+      $('body').addClass('mobile-active');
     });
 
-  $(window).load(function(){
+    $btn_close.on('click touch', function (e) {
+      e.preventDefault();
+
+      $('body').removeClass('mobile-active');
+    })
+  });
+
+  $(window).load(function () {
     $('.scroll-pane').jScrollPane();
   });
 
-  $(window).load(function(){
+  $(window).load(function () {
     var $wrapper = $('.accordion-wrapper'),
       $el = $wrapper.find('a');
 
-    $el.on('click touch', function(e){
+    $el.on('click touch', function (e) {
       e.preventDefault();
 
       var $parent = $(this).parent();
 
-      if($parent.hasClass('active')){
+      if ($parent.hasClass('active')) {
         $parent.removeClass('active');
-      }else{
+      } else {
         $parent.addClass('active');
       }
     })
@@ -228,6 +255,15 @@ function initMap() {
     styles: styleArray,
     zoom: 13
   });
+
+  var myLatlng = new google.maps.LatLng(55.822406,49.108963);
+
+  var marker = new google.maps.Marker({
+    position: myLatlng,
+    title:"Адвокат"
+  });
+
+  marker.setMap(map);
 
 }
 
